@@ -39,7 +39,12 @@
     <script>
         let table = document.getElementById('table')
         document.getElementById('button').addEventListener('click', function(){
-            table.style.display = 'block';
+            let input = document.querySelector('.input');
+            if (input.value.length !== 8) {
+                alert('Пожалуйста, введите ровно 8 цифр');
+            } else {
+                table.style.display = 'block';
+            };
         });
     </script>
 </body>
